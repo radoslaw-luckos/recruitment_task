@@ -5,11 +5,11 @@ import EventsList from './components/list/EventsList'
 const App = () => {
 
   return (
-      <main className='flex flex-col items-center justify-center w-screen h-screen bg-gray-900'>
-        <h1 className='text-xl text-cyan-200 pb-8'>Add new event to our DB!</h1>
+    <main className='flex flex-row items-start justify-around w-screen h-screen bg-gray-900 overflow-auto p-20 '>
+
         <AddEventForm />
-        <EventsList />
-      </main>
+      <EventsList />
+    </main >
   )
 }
 

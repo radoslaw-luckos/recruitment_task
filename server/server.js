@@ -1,11 +1,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 const app = express();
 
+const corsOptions = {
+    origin: '*',
+    methods: ["GET", "POST"],
+};
+
 dotenv.config();
 app.use(express.json());
+app.use(cors(corsOptions));
+
 
 
 //greeting route

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useFormik } from 'formik'
 import FormInput from './FormInput'
+import FormButton from './FormButton'
 
 const AddEventForm = () => {
     const formik = useFormik({
@@ -12,7 +13,7 @@ const AddEventForm = () => {
         }
       })
     return (
-    <form onSubmit={formik.handleSubmit} className='flex flex-col items-center justify-center'>
+    <form onSubmit={formik.handleSubmit} className='flex flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-teal-200 p-12 rounded-md mb-20'>
       <FormInput
         id='firstName'
         title='First Name'
@@ -41,7 +42,7 @@ const AddEventForm = () => {
         changeHandler={formik.handleChange}
         value={formik.values.eventDate}
       />
-      <button type="submit">Submit</button>
+      <FormButton title='Add Event' type="submit"/>
     </form>
   )
 }

@@ -15,7 +15,7 @@ const EventSchema = mongoose.Schema({
     },
     eventDate: {
         type: Date,
-        required: [true, "The date field shouldn't be empty. Please enter date of your event!"]
+        required: [true, "Please enter correct date of your event!"]
     }
 });
 

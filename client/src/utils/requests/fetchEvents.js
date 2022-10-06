@@ -1,3 +1,4 @@
+import { formatDate } from '../helpers/formatDate';
 import { url } from '../url'
 
 export const fetchEvents = async () => {
@@ -14,11 +15,8 @@ export const fetchEvents = async () => {
         if (response.ok) {
             const data = await response.json()
             const newData = data.map(event => {
-                event.eventDate = new Date(event.eventDate)
-                const day = event.eventDate.getDate()
-                const month = (event.eventDate.getMonth() + 1) < 10 ? `0${event.eventDate.getMonth() + 1}` : event.eventDate.getMonth() + 1
-                const year = event.eventDate.getFullYear()
-                event.eventDate = `${day}.${month}.${year}`
+                const formattedDate = formatDate(event.eventDate)
+                event.eventDate = formattedDate
                 return event
             })
             const res = {

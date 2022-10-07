@@ -6,10 +6,14 @@ import eventsReducer from '../state/EventsSlice'
 export function renderWithProviders(
   ui,
   {
-      preloadedState = {
-          eventsList: []
+    preloadedState = {
+        eventsList: []
+    },
+    store = configureStore({
+      reducer: {
+          events: eventsReducer
       },
-    store = configureStore({ reducer: { events: eventsReducer }, preloadedState }),
+    }),
     ...renderOptions
   } = {}
 ) {

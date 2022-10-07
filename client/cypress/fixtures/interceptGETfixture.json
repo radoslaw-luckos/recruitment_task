@@ -1,0 +1,18 @@
+[
+    {
+        "_id": "633fea1b3759368871a83a80",
+        "firstName": "Example 1",
+        "lastName": "Example",
+        "email": "example@hotmail.com",
+        "eventDate": "2022-12-20T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "633fea513759368871a83a85",
+        "firstName": "Example 2",
+        "lastName": "Example",
+        "email": "example@hotmail.com",
+        "eventDate": "2022-12-20T00:00:00.000Z",
+        "__v": 0
+    }
+]
